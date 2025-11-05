@@ -1,0 +1,11 @@
+services:
+  notification-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: notification-hub:dev
+    ports:
+      - "8000:8000"
+    environment:
+      SERVICE_NAME: notification-hub
+      SERVICE_VERSION: "0.1.0"
